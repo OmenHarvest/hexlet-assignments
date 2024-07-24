@@ -19,7 +19,7 @@ public class Application {
                     e.printStackTrace();
                 }
 
-                System.out.println(method.getName() + " " + method.getReturnType().toString());
+                System.out.println("Method " + method.getName() + " returns a value of type" + method.getReturnType());
             }
         }
         // END
