@@ -14,7 +14,7 @@ public class Address {
     // BEGIN
     
     // END
-    @Inspect
+    @Inspect(enabled = true, threshold = 100)
     public String getCity() {
         return city;
     }
@@ -22,7 +22,7 @@ public class Address {
     // BEGIN
     
     // END
-    @Inspect
+    @Inspect(enabled = true, threshold = 100)
     public int getPostalCode() {
         return postalCode;
     }
