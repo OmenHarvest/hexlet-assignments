@@ -11,7 +11,7 @@ public class Application {
         var address = new Address("London", 12345678);
 
         for (Method method : Address.class.getDeclaredMethods()) {
-            if(method.isAnnotationPresent(Inspect.class)) {
+            if (method.isAnnotationPresent(Inspect.class)) {
                 try {
                     method.invoke(address);
                 }
