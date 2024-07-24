@@ -28,7 +28,7 @@ public class Application {
 
     // BEGIN
     @GetMapping("/posts/{id}")
-    public Optional<Post> getPost(@PathVariable int id) {
+    public Optional<Post> getPost(@PathVariable String id) {
         var post = posts.stream().filter(p -> p.getid().equals(id)).findFirst();
         return post;
     }
@@ -40,7 +40,7 @@ public class Application {
     }
 
     @DeleteMapping("/posts/{id}")
-    public void deletePost(@PathVariable int id) {
+    public void deletePost(@PathVariable String id) {
         posts.removeIf(p -> p.getid().equals(id));
     }
 
@@ -50,7 +50,7 @@ public class Application {
     }
 
     @PutMapping("/posts/{id}")
-    public Post update(@PathVariable int id, @RequestBody Post postData) {
+    public Post update(@PathVariable String id, @RequestBody Post postData) {
         var maybePost = posts.stream()
                 .filter(p -> p.getid().equals(id))
                 .findFirst();
