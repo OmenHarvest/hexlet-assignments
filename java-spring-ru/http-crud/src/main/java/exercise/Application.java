@@ -50,7 +50,7 @@ public class Application {
     }
 
     @PutMapping("/posts/{id}")
-    public Post update(@PathVariable String id, @RequestBody Post postData) {
+    public Post update(@PathVariable int id, @RequestBody Post postData) {
         var maybePost = posts.stream()
                 .filter(p -> p.getid().equals(id))
                 .findFirst();
