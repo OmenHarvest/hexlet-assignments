@@ -7,7 +7,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class Application {
-    public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
+    public static void main(String[] args) {
         var address = new Address("London", 12345678);
 
         for (Method method : Address.class.getDeclaredMethods()) {
