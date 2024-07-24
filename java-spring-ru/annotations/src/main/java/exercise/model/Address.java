@@ -11,17 +11,11 @@ public class Address {
         this.postalCode = postalCode;
     }
 
-    // BEGIN
-    
-    // END
     @Inspect
     public String getCity() {
         return city;
     }
 
-    // BEGIN
-    
-    // END
     @Inspect
     public int getPostalCode() {
         return postalCode;
